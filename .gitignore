@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+Theme HTML
+package-lock.json
+dist
+report*.json

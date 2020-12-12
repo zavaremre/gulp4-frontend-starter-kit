@@ -1,0 +1,299 @@
+ 
+
+/*Css Colors Variables Start*/
+  $theme-main-color-1         :                      red;    
+  $theme-main-color-2         :                      red; 
+  $theme-main-color-3         :                      red;  
+  $gold-color                 :                      white; 
+  $facebook-color             :                      #3b5998;  
+  $twitter-color              :                      #1da1f2;
+  $youtube-color              :                      #ff0000; 
+  $instagrammagenta-color     :                      #c32aa3; 
+  $instagramblue-color        :                      #4c5fd7;             
+  $instagrampurple-color      :                      #7232bd;
+  $instagramorange-color      :                      #f46f30;
+  $instagramyellow-color      :                      #ffdc7d;
+  $googleblue-color           :                      #4285f4;
+  $googlered-color            :                      #ea4335; 
+  $googleyellow-color         :                      #fbbc05; 
+  $googlegreen-color          :                      #34a853; 
+  $pinterest-color            :                      #bd081c;
+  $googleplus-color           :                      #db4437;
+  $linkedin-color             :                      #007bb5;
+  $vimeoblue-color            :                      #1ab7ea;
+  $tumblr-color               :                      #2c4762;
+  $snapchat-color             :                      #fffc00;
+  $whatsappgreen-color        :                      #25d366;
+  $whatsappteal1-color        :                      #075e54;
+  $whatsappteal2-color        :                      #128c7e;
+  $apple-color                :                      #a6b1b7;
+  $amazon-color               :                      #ff9900;
+  $microsoftred-color         :                      #f35022;
+  $microsoftgreen-color       :                      #80bb03;
+  $microsoftblue-color        :                      #03a5f0;
+  $microsoftyellow-color      :                      #ffb903;
+  $foursquarepink-color       :                      #f94877; 
+  $foursquarenavy-color       :                      #073282;
+  $foursquareblue-color       :                      #2d5be3; 
+  $swarm-color                :                      #ffa633;
+  $medium-color               :                      #02b875;
+  $skypeblue-color            :                      #00aff0;
+  $skypedkblue-color          :                      #0078d7;
+  $android-color              :                      #a4c639;
+  $stumbleupon-color          :                      #e94826;
+  $flickrpink-color           :                      #f40083;
+  $flickrblue-color           :                      #006add;
+  $yahoo-color                :                      #430297;
+  $soundcloud-color           :                      #ff5500;
+  $spotifygreen-color         :                      #1ed760;
+  $spotifydarkgreen-color     :                      #1db954;
+  $dribbble-color             :                      #ea4c89;
+  $slackpurple-color          :                      #4d394b; 
+  $slackskyblue-color         :                      #70cadb; 
+  $slackmosss-color           :                      #3eb890; 
+  $slackpink-color            :                      #e01765; 
+  $slackyellow-color          :                      #e8a723; 
+  $slackgreenblue-color       :                      #1a937d;
+  $slackviolet-color          :                      #472a49; 
+  $slackolive-color           :                      #65863a; 
+  $slackred-color             :                      #cc2027; 
+  $reddit-color               :                      #ff5700;
+  $deviantart-color           :                      #05cc47;
+  $pocket-color               :                      #ee4056;
+  $quora-color                :                      #aa2200;
+  $quorablue-color            :                      #2b6dad;
+  $slideshareorange-color     :                      #e68523;
+  $slideshareblue-color       :                      #00a0dc;
+  $fivehundredpx-color        :                      #0099e5;
+  $vk-color                   :                      #4a76a8;
+  $listlyorange-color         :                      #df6d46;
+  $listlyblue-color           :                      #52b1b3;
+  $vine-color                 :                      #00b489;
+  $steam-color                :                      #171a21;
+  $discord-color              :                      #7289da;
+   
+  
+  $colors: () !default;
+  $colors: map-merge((
+    'theme-main-color-1 '     :                    $theme-main-color-1,
+    'theme-main-color-2 '     :                    $theme-main-color-2,
+    'theme-main-color-3 '     :                    $theme-main-color-3,
+    'gold-color'              :                    $gold-color,
+    'facebook-color'          :                    $facebook-color,
+    'twitter-color'           :                    $twitter-color ,
+    'youtube-color'           :                    $youtube-color,
+    'instagrammagenta-color'  :                    $instagrammagenta-color,
+    'instagramblue-color'     :                    $instagramblue-color ,
+    'instagrampurple-color'   :                    $instagrampurple-color,  
+    'instagramorange-color'   :                    $instagramorange-color,  
+    'instagramyellow-color'   :                    $instagramyellow-color , 
+    'googleblue-color'        :                    $googleblue-color ,  
+    'googlered-color'         :                    $googlered-color, 
+    'googleyellow-color'      :                    $googleyellow-color,  
+    'googlegreen-color'       :                    $googlegreen-color ,
+    'pinterest-color'         :                    $pinterest-color ,
+    'googleplus-color'        :                    $googleplus-color  ,
+    'linkedin-color'          :                    $linkedin-color ,
+    'vimeoblue-color'         :                    $vimeoblue-color ,
+    'tumblr-color'            :                    $tumblr-color ,
+    'snapchat-color'          :                    $snapchat-color,  
+    'whatsappgreen-color'     :                    $whatsappgreen-color ,
+    'whatsappteal1-color'     :                    $whatsappteal1-color,  
+    'whatsappteal2-color'     :                    $whatsappteal2-color,  
+    'apple-color'             :                    $apple-color,  
+    'amazon-color'            :                    $amazon-color,  
+    'microsoftred-color'      :                    $microsoftred-color,  
+    'microsoftgreen-color'    :                    $microsoftgreen-color,  
+    'microsoftblue-color'     :                    $microsoftblue-color ,
+    'microsoftyellow-color'   :                    $microsoftyellow-color, 
+    'foursquarepink-color'    :                    $foursquarepink-color , 
+    'foursquarenavy-color'    :                    $foursquarenavy-color ,
+    'foursquareblue-color'    :                    $foursquareblue-color , 
+    'swarm-color'             :                    $swarm-color ,
+    'medium-color'            :                    $medium-color,  
+    'skypeblue-color'         :                    $skypeblue-color ,
+    'skypedkblue-color'       :                    $skypedkblue-color ,
+    'android-color'           :                    $android-color,  
+    'stumbleupon-color'       :                    $stumbleupon-color,  
+    'flickrpink-color'        :                    $flickrpink-color,  
+    'flickrblue-color'        :                    $flickrblue-color,  
+    'yahoo-color'             :                    $yahoo-color,  
+    'soundcloud-color'        :                    $soundcloud-color ,
+    'spotifygreen-color'      :                    $spotifygreen-color ,  
+    'spotifydarkgreen-color'  :                    $spotifydarkgreen-color ,
+    'dribbble-color'          :                    $dribbble-color,  
+    'slackpurple-color'       :                    $slackpurple-color,   
+    'slackskyblue-color'      :                    $slackskyblue-color,   
+    'slackmosss-color'        :                    $slackmosss-color,   
+    'slackpink-color'         :                    $slackpink-color,   
+    'slackyellow-color'       :                    $slackyellow-color,   
+    'slackgreenblue-color'    :                    $slackgreenblue-color,  
+    'slackviolet-color'       :                    $slackviolet-color,   
+    'slackolive-color'        :                    $slackolive-color,   
+    'slackred-color'          :                    $slackred-color,   
+    'reddit-color'            :                    $reddit-color ,
+    'deviantart-color'        :                    $deviantart-color ,
+    'pocket-color'            :                    $pocket-color,  
+    'quora-color'             :                    $quora-color,  
+    'quorablue-color'         :                    $quorablue-color ,
+    'slideshareorange-color'  :                    $slideshareorange-color ,
+    'slideshareblue-color'    :                    $slideshareblue-color ,
+    'fivehundredpx-color'     :                    $fivehundredpx-color ,
+    'vk-color'                :                    $vk-color,  
+    'listlyorange-color'      :                    $listlyorange-color,  
+    'listlyblue-color'        :                    $listlyblue-color,  
+    'vine-color'              :                    $vine-color,  
+    'steam-color'             :                    $steam-color,  
+    'discord-color'           :                    $discord-color, 
+ 
+  ), $colors);
+
+
+  $main-1                     :                    $theme-main-color-1;
+  $main-2                     :                    $theme-main-color-2;
+  $main-3                     :                    $theme-main-color-3;
+  $gold                       :                    $gold-color!default;
+  $facebook                   :                    $facebook-color!default;
+  $twitter                    :                    $twitter-color !default;
+  $youtube                    :                    $youtube-color!default;
+  $instagrammagenta           :                    $instagrammagenta-color!default;
+  $instagramblue              :                    $instagramblue-color !default;
+  $instagrampurple            :                    $instagrampurple-color!default;  
+  $instagramorange            :                    $instagramorange-color!default;  
+  $instagramyellow            :                    $instagramyellow-color !default; 
+  $googleblue                 :                    $googleblue-color !default;  
+  $googlered                  :                    $googlered-color!default; 
+  $googleyellow               :                    $googleyellow-color!default;  
+  $googlegreen                :                    $googlegreen-color !default;
+  $pinterest                  :                    $pinterest-color !default;
+  $googleplus                 :                    $googleplus-color  !default;
+  $linkedin                   :                    $linkedin-color !default;
+  $vimeoblue                  :                    $vimeoblue-color !default;
+  $tumblr                     :                    $tumblr-color !default;
+  $snapchat                   :                    $snapchat-color!default;  
+  $whatsappgreen              :                    $whatsappgreen-color !default;
+  $whatsappteal1              :                    $whatsappteal1-color!default;  
+  $whatsappteal2              :                    $whatsappteal2-color!default;  
+  $apple                      :                    $apple-color!default;  
+  $amazon                     :                    $amazon-color!default;  
+  $microsoftred               :                    $microsoftred-color!default;  
+  $microsoftgreen             :                    $microsoftgreen-color!default;  
+  $microsoftblue              :                    $microsoftblue-color !default;
+  $microsoftyellow            :                    $microsoftyellow-color !default;  
+  $foursquarepink             :                    $foursquarepink-color !default; 
+  $foursquarenavy             :                    $foursquarenavy-color !default;
+  $foursquareblue             :                    $foursquareblue-color !default; 
+  $swarm                      :                    $swarm-color !default;
+  $medium                     :                    $medium-color!default;  
+  $skypeblue                  :                    $skypeblue-color !default;
+  $skypedkblue                :                    $skypedkblue-color !default;
+  $android                    :                    $android-color!default;  
+  $stumbleupon                :                    $stumbleupon-color!default;  
+  $flickrpink                 :                    $flickrpink-color!default;  
+  $flickrblue                 :                    $flickrblue-color!default;  
+  $yahoo                      :                    $yahoo-color!default;  
+  $soundcloud                 :                    $soundcloud-color !default;
+  $spotifygreen               :                    $spotifygreen-color !default;  
+  $spotifydarkgreen           :                    $spotifydarkgreen-color !default;
+  $dribbble                   :                    $dribbble-color!default;  
+  $slackpurple                :                    $slackpurple-color!default;   
+  $slackskyblue               :                    $slackskyblue-color!default;   
+  $slackmosss                 :                    $slackmosss-color!default;   
+  $slackpink                  :                    $slackpink-color!default;   
+  $slackyellow                :                    $slackyellow-color!default;   
+  $slackgreenblue             :                    $slackgreenblue-color!default;  
+  $slackviolet                :                    $slackviolet-color!default;   
+  $slackolive                 :                    $slackolive-color!default;   
+  $slackred                   :                    $slackred-color!default;   
+  $reddit                     :                    $reddit-color !default;
+  $deviantart                 :                    $deviantart-color !default;
+  $pocket                     :                    $pocket-color!default;  
+  $quora                      :                    $quora-color!default;  
+  $quorablue                  :                    $quorablue-color !default;
+  $slideshareorange           :                    $slideshareorange-color !default;
+  $slideshareblue             :                    $slideshareblue-color !default;
+  $fivehundredpx              :                    $fivehundredpx-color !default;
+  $vk                         :                    $vk-color!default;  
+  $listlyorange               :                    $listlyorange-color!default;  
+  $listlyblue                 :                    $listlyblue-color!default;  
+  $vine                       :                    $vine-color!default;  
+  $steam                      :                    $steam-color!default;  
+  $discord                    :                    $discord-color!default; 
+ 
+  
+   
+  $theme-colors: () !default;
+  $theme-colors: map-merge((
+    'main-1 '                 :                    $theme-main-color-1,
+    'main-2 '                 :                    $theme-main-color-2,
+    'main-3 '                 :                    $theme-main-color-3,
+    'gold'                    :                    $gold-color,
+    'facebook'                :                    $facebook-color,
+    'twitter'                 :                    $twitter-color ,
+    'youtube'                 :                    $youtube-color,
+    'instagrammagenta'        :                    $instagrammagenta-color,
+    'instagramblue'           :                    $instagramblue-color ,
+    'instagrampurple'         :                    $instagrampurple-color,  
+    'instagramorange'         :                    $instagramorange-color,  
+    'instagramyellow'         :                    $instagramyellow-color , 
+    'googleblue'              :                    $googleblue-color ,  
+    'googlered'               :                    $googlered-color, 
+    'googleyellow'            :                    $googleyellow-color,  
+    'googlegreen'             :                    $googlegreen-color ,
+    'pinterest'               :                    $pinterest-color ,
+    'googleplus'              :                    $googleplus-color  ,
+    'linkedin'                :                    $linkedin-color ,
+    'vimeoblue'               :                    $vimeoblue-color ,
+    'tumblr'                  :                    $tumblr-color ,
+    'snapchat'                :                    $snapchat-color,  
+    'whatsappgreen'           :                    $whatsappgreen-color ,
+    'whatsappteal1'           :                    $whatsappteal1-color,  
+    'whatsappteal2'           :                    $whatsappteal2-color,  
+    'apple'                   :                    $apple-color,  
+    'amazon'                  :                    $amazon-color,  
+    'microsoftred'            :                    $microsoftred-color,  
+    'microsoftgreen'          :                    $microsoftgreen-color,  
+    'microsoftblue'           :                    $microsoftblue-color , 
+    'microsoftyellow'         :                    $microsoftyellow-color, 
+    'foursquarepink'          :                    $foursquarepink-color , 
+    'foursquarenavy'          :                    $foursquarenavy-color ,
+    'foursquareblue'          :                    $foursquareblue-color , 
+    'swarm'                   :                    $swarm-color ,
+    'medium'                  :                    $medium-color,  
+    'skypeblue'               :                    $skypeblue-color ,
+    'skypedkblue'             :                    $skypedkblue-color ,
+    'android'                 :                    $android-color,  
+    'stumbleupon'             :                    $stumbleupon-color,  
+    'flickrpink'              :                    $flickrpink-color,  
+    'flickrblue'              :                    $flickrblue-color,  
+    'yahoo'                   :                    $yahoo-color,  
+    'soundcloud'              :                    $soundcloud-color ,
+    'spotifygreen'            :                    $spotifygreen-color ,  
+    'spotifydarkgreen'        :                    $spotifydarkgreen-color ,
+    'dribbble'                :                    $dribbble-color,  
+    'slackpurple'             :                    $slackpurple-color,   
+    'slackskyblue'            :                    $slackskyblue-color,   
+    'slackmosss'              :                    $slackmosss-color,   
+    'slackpink'               :                    $slackpink-color,   
+    'slackyellow'             :                    $slackyellow-color,   
+    'slackgreenblue'          :                    $slackgreenblue-color,  
+    'slackviolet'             :                    $slackviolet-color,   
+    'slackolive'              :                    $slackolive-color,   
+    'slackred'                :                    $slackred-color,   
+    'reddit'                  :                    $reddit-color ,
+    'deviantart'              :                    $deviantart-color ,
+    'pocket'                  :                    $pocket-color,  
+    'quora'                   :                    $quora-color,  
+    'quorablue'               :                    $quorablue-color ,
+    'slideshareorange'        :                    $slideshareorange-color ,
+    'slideshareblue'          :                    $slideshareblue-color ,
+    'fivehundredpx'           :                    $fivehundredpx-color ,
+    'vk'                      :                    $vk-color,  
+    'listlyorange'            :                    $listlyorange-color,  
+    'listlyblue'              :                    $listlyblue-color,  
+    'vine'                    :                    $vine-color,  
+    'steam'                   :                    $steam-color,  
+    'discord'                 :                    $discord-color, 
+  
+  ), $theme-colors);
+/*Css Colors Variables End*/

@@ -1,0 +1,47 @@
+ /*
+
+	Template;
+		* Name	   	  : ThemeName
+		* Created Date    : date
+		* Version         : 0.0.1 
+
+	Author;
+		* Gmail     : zavaremre@gmail.com 
+		* Web Site  : http://www.ravaze.com
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	Copyright (c) 2018 - EMRE ZAVAR - https://ravaze.com
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ @import "./plugins/bootstrap/variables";
+ @import "./plugins/bootstrap/colors";
+  
+
+ $base_font : 'Roboto';
+ $handWrite :'Caveat';
+ $height100: 100%;
+ $headerHeight:165px;
+ $footerHeight:73px;
+
+ //font-family: 'Amatic SC', cursive;
+ // font-family: 'Dosis', sans-serif;
+
+
+ html {
+ 	height: 100%;
+ }
+
+ body {
+
+ 	font-size: 12px;
+ 	line-height: 1.7;
+ 	color: #555;
+ 	font-family: $base_font;
+
+
+ 	
+ }
+
+ @import './dark.scss';
+ @import './responsive.scss';
