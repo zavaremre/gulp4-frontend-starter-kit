@@ -1,17 +1,7 @@
 'use strict';
 
 (function () {
-
-  $('[href^="#"]:not([href="#"])').click(function (e) {
-    e.preventDefault();
-    var target = $($(this).attr('href'));
-    if (target.length) {
-      var scrollTo = target.offset().top;
-      $('body, html').animate({
-        scrollTop: scrollTo + 'px'
-      }, 350);
-    }
-  });
+ 
 
   $('[data-toggle="tooltip"]').tooltip({});
  
@@ -99,27 +89,11 @@
     },
 
   });
-
-
-
-
-
+ 
   window.addEventListener('DOMContentLoaded', (event) => {
     $('.loader').remove();
   });
-
-
-  var darkmode = document.querySelectorAll(".darkmode-toggle");
-  var body = document.querySelector("body");
-
-  for (let i = 0; i < darkmode.length; i++) {
-    darkmode[i].addEventListener('click', function () {
-      body.classList.toggle('darkmode') 
-      this.classList.toggle('active')
-    });
-  }
-
-
+ 
 
 
 })();

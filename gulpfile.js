@@ -104,6 +104,11 @@ var paths = {
         dest: path.productionDir + '/theme/assets/js',
         destMin: path.productionDir + 'theme.min/assets/js',
     },
+    configJS: {
+        src: path.developmentDir + '/js/config.js',
+        dest: path.productionDir + '/theme/assets/js',
+        destMin: path.productionDir + 'theme.min/assets/js',
+    },
     vendors: {
         src: path.developmentDir + '/vendors/*',
         dest: path.productionDir + '/theme/assets/js',
@@ -157,7 +162,7 @@ gulp.task('includes', () => {
 gulp.task('gulpPug', () => {
     return gulp.src(paths.gulpPug.src)
         .pipe(plumber())
-       
+
         .pipe(pug({
             pretty: false
         }))
@@ -170,7 +175,7 @@ gulp.task('gulpPug', () => {
             stream: true
         }))
         .pipe(gulp.dest(paths.gulpPug.dest))
-       
+
         .pipe(plumber.stop())
 
 });
@@ -397,6 +402,39 @@ gulp.task('pluginsJS', () => {
         }))
         .pipe(plumber.stop())
 });
+gulp.task('configJS', () => {
+
+    //Select files
+    return gulp.src(paths.configJS.src)
+        .pipe(plumber())
+        //Concatenate includes
+        .pipe(include())
+        //Transpile
+        .pipe(babel({
+            presets: [
+                ['env', {
+                    loose: true,
+                    modules: false
+                }]
+            ] //'use-strict' deleted
+        }))
+        //Save unminified file
+        .pipe(gulpif(!demo, gulp.dest(paths.configJS.dest)))
+        //Optimize and minify
+
+        //Append suffix
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        //Save minified file
+        .pipe(gulp.dest(paths.configJS.destMin))
+
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+        .pipe(plumber.stop())
+});
 
 
 /**
@@ -478,26 +516,14 @@ gulp.task('images', () => {
 gulp.task('clean', () => {
 
     del([
-        
+
         path.productionDir + '/lib*',
-        path.productionDir + '/assets/js/_mobile.min.js',
-        path.productionDir + '/assets/js/_mobile.js',
-        path.productionDir + '/assets/js/_glitch.min.js',
-        path.productionDir + '/assets/js/_glitch.js',
-        path.productionDir + '/assets/js/_config.min.js',
-        path.productionDir + '/assets/js/_config.js',
         path.productionDir + '/assets/css/colors.css',
         path.productionDir + '/assets/css/colors.min.css',
         path.productionDir + '/assets/css/variables.css',
         path.productionDir + '/assets/css/variables.min.css',
         //min deleted files
         path.productionDir + 'theme.min/lib*',
-        path.productionDir + 'theme.min/assets/js/_mobile.min.js',
-        path.productionDir + 'theme.min/assets/js/_mobile.js',
-        path.productionDir + 'theme.min/assets/js/_glitch.min.js',
-        path.productionDir + 'theme.min/assets/js/_glitch.js',
-        path.productionDir + 'theme.min/assets/js/_config.min.js',
-        path.productionDir + 'theme.min/assets/js/_config.js',
         path.productionDir + 'theme.min/assets/css/colors.css',
         path.productionDir + 'theme.min/assets/css/colors.min.css',
         path.productionDir + 'theme.min/assets/css/variables.css',
@@ -543,11 +569,13 @@ gulp.task('browser-sync', function () {
     browserSync.init({
         watch: true,
         server: {
+            host: "192.168.1.4",
             baseDir: [path.productionDir + '/'],
             index: "/theme/index.html",
             directory: false,
             https: true,
         },
+        port: 8080
     });
     gulp.watch(path.developmentDir + '/scss/*.scss', gulp.series('styleWatch')).on('change', browserSync.stream);
     gulp.watch(path.developmentDir + '/scss/plugins/bootstrap/*.scss', gulp.series('bootstrapScssWatch')).on('change', browserSync.stream);
@@ -555,7 +583,8 @@ gulp.task('browser-sync', function () {
     gulp.watch(path.developmentDir + '/scss/plugins/icofont/*.scss', gulp.series('icofontWatch')).on('change', browserSync.stream);
     gulp.watch(path.developmentDir + '/pug/**/*.pug', gulp.series('pugWatch')).on('change', browserSync.stream);
     gulp.watch(path.developmentDir + '/js/bootstrap.js', gulp.series('bootstrapJs')).on('change', browserSync.stream);
-    gulp.watch(path.developmentDir + '/js/*.js', gulp.series('pluginsjS')).on('change', browserSync.stream);
+    gulp.watch(path.developmentDir + '/js/plugins.js', gulp.series('pluginsjS')).on('change', browserSync.stream);
+    gulp.watch(path.developmentDir + '/js/config.js', gulp.series('configJsWatch')).on('change', browserSync.stream);
     gulp.watch(path.developmentDir + '/images/**/*', gulp.series('imageWatch')).on('change', browserSync.stream);
 
 });
@@ -572,6 +601,7 @@ gulp.task('default',
         'icofont',
         'bootstrapJS',
         'pluginsJS',
+        'configJS',
         'images',
         'browser-sync'
     ));
@@ -584,3 +614,4 @@ gulp.task('icofontWatch', gulp.series('icofont'));
 gulp.task('pugWatch', gulp.series('gulpPug'));
 gulp.task('bootstrapJs', gulp.series('bootstrapJS'));
 gulp.task('pluginsjS', gulp.series('pluginsJS'));
+gulp.task('configJsWatch', gulp.series('configJS'));
